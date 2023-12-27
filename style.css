@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=Delius+Unicase&family=Poppins&family=Rowdies:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+#nav {
+    width: 100%;
+    background-color: #1e1e1e;
+    height: 60px;
+    position: fixed;
+}
+
+#nav ul {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    line-height: 60px;
+}
+
+#nav ul li {
+    list-style: none;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+    padding: 7px;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+
+#nav ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+#firework {
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient(at 50% 100%, rgb(15, 15, 57),black 75%);
+    padding-top: 50px;
+}
+
+#firework .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px;
+}
+
+#firework h1:first-child{
+    color: white;
+    font-size: 5rem;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#firework h1:last-child{
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#firework .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 100px;
+}
+
+#firework .content .container {
+    width: 400px;
+    height: 330px;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#firework .content .container p {
+    color: white;
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#firework .content .container span {
+    color: white;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#countdown {
+    width: 100%;
+    height: 100vh;
+}
+
+#countdown img {
+    width: 100%;
+}
+
