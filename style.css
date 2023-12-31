@@ -5,15 +5,20 @@
     margin: 0;
 }
 
+body {
+    background-color: black;
+}
+
 .container-fluid {
     width: 100%;
 }
 
 #nav {
     width: 100%;
-    background-color: #1e1e1e;
+    background-color: #292929;
     height: 60px;
     position: fixed;
+    z-index: 100;
 }
 
 #nav ul {
@@ -49,53 +54,60 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-#firework {
+#countdown {
     width: 100%;
     height: 100vh;
-    background-image: radial-gradient(at 50% 100%, rgb(15, 15, 57),black 75%);
+    background: radial-gradient(at 50% 100%, rgb(15, 15, 57), black 75%); 
     padding-top: 50px;
+} 
+
+#countdown img {
+    position: absolute;
+    width: 100%;
+    filter: blur(5px);
 }
 
-#firework .title {
+#countdown .title {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px 35px;
 }
 
-#firework h1:first-child{
+#countdown h1:first-child{
     color: white;
     font-size: 5rem;
     font-family: 'Bebas Neue', sans-serif;
 }
 
-#firework h1:last-child{
+#countdown h1:last-child{
     color: white;
     font-size: 2.5rem;
     font-family: 'Poppins', sans-serif;
 }
 
-#firework .content {
+#countdown .content {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 70px;
+    padding-top: 70px;
 }
 
-#firework .content .container {
+#countdown .content .container {
     width: 370px;
     height: 330px;
-    background-color: #1e1e1e;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    z-index: 10;
 }
 
-#firework .content .container:hover {
+#countdown .content .container:hover {
     opacity: 0.7;
     border: 0;
     transform: translateY(-30px);
@@ -103,23 +115,579 @@
     backdrop-filter: blur(8px);
 }
 
-#firework .content .container p {
+#countdown .content .container p {
     color: white;
     font-size: 60px;
     font-family: 'Poppins', sans-serif;
 }
 
-#firework .content .container span {
+#countdown .content .container span {
     color: white;
     font-size: 40px;
     font-family: 'Poppins', sans-serif;
 }
 
-#countdown {
+#information {
     width: 100%;
     height: 100vh;
+    background: radial-gradient(at 50% 0%, rgb(15, 15, 57), black 75%); 
+    z-index: 10;
+    padding-top: 30 px;
 }
 
-#countdown img {
+.stars:first-child {
+    position: absolute;
+    right: 4%;
+    top: 80px;
+}
+
+.moon {
+    position: absolute;
+    top: 60px;
+    left: 1%;
+}
+
+#information .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 35px;
+}
+
+#information .title h1 {
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+}
+
+#information h1:last-child{
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#information .container {
+    width: 60%;
+    padding: 30px;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    margin: 0px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: 0.3s;
+}
+
+#information .container:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#information .NewYearIMG {
+    width: 30%;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#information .container p {
+    color: white;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.line-container {
     width: 100%;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.line-container-satu {
+    width: 100%;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 250px;
+}
+
+.line-container-satu p {
+    color: white;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.line-container-satu span {
+    width: 75%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.line-container p {
+    color: white;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.line-container span {
+    width: 75%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#quotes {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(at 50% 50%, rgb(15, 15, 57), black 75%); 
+    padding-top: 30px;
+}
+
+.bubble1, .bubble2, .bubble3, .bubble4, .bubble5, .bubble6, .bubble7  {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+}
+
+.bubble1 {
+    width: 220px;
+    height: 220px;
+    right: 65%;
+    top: 224%;
+    animation: bub1 5s alternate-reverse infinite ease-in-out;
+}
+
+.bubble2 {
+    right: 15%;
+    top: 237%;
+    animation: bub2 5s alternate-reverse infinite ease-in-out;
+}
+
+.bubble3 {
+    right: 32%;
+    top: 215%;
+    animation: bub3 5s alternate-reverse infinite ease-in-out;
+}
+
+.bubble4 {
+    right: 66%;
+    top: 265%;
+    animation: bub4 5s alternate-reverse infinite ease-in-out;
+}
+
+.bubble5 {
+    right: 26%;
+    top: 277%;
+    animation: bub5 5s alternate-reverse infinite ease-in-out;
+}
+
+.bubble6 {
+    right: 43%;
+    top: 257%;
+    animation: bub6 5s alternate-reverse infinite ease-in-out;
+}
+
+.bubble7 {
+    right: 16%;
+    top: 277%;
+    animation: bub7 5s alternate-reverse infinite ease-in-out;
+}
+
+@keyframes bub1 {
+    0% {
+        right: 65%;
+        top: 224%;
+    }
+
+    100% {
+        top: 213%;
+        right: 70%;
+    }
+}
+
+@keyframes bub2 {
+    0% {
+        right: 9%;
+        top: 237%;
+    }
+
+    100% {
+        top: 242%;
+        right: 12%;
+    }
+}
+
+@keyframes bub3 {
+    0% {
+        right: 32%;
+        top: 215%;
+    }
+
+    100% {
+        top: 221%;
+        right: 37%;
+    }
+}
+
+@keyframes bub4 {
+    0% {
+        right: 66%;
+        top: 265%;
+    }
+
+    100% {
+        top: 263%;
+        right: 72%;
+    }
+}
+
+@keyframes bub5 {
+    0% {
+        right: 26%;
+        top: 274%;
+    }
+
+    100% {
+        top: 282%;
+        right: 30%;
+    }
+}
+
+@keyframes bub6 {
+    0% {
+        right: 43%;
+        top: 257%;
+    }
+
+    100% {
+        top: 264%;
+        right: 49%;
+    }
+}
+
+@keyframes bub7 {
+    0% {
+        right: 16%;
+        top: 267%;
+    }
+
+    100% {
+        top: 243%;
+        right: 30%;
+    }
+}
+
+
+
+#quotes .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 35px;
+    z-index: 5;
+}
+
+#quotes .title h1 {
+    z-index: 5;
+}
+
+#quotes h1:first-child{
+    color: white;
+    font-size: 5rem;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+#quotes h1:last-child{
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#quotes .container {
+    width: 60%;
+    height: 300px;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+#quotes .container p {
+    font-size: 20px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 30px;
+}
+
+#quotes .container div:first-child {
+    width: 80%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+#quotes .container div:last-child {
+    width: 80%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+#quotes .container:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@Media (max-width: 1440px) {
+    .line-container-satu {
+        margin-top: 120px;
+    }     
+}
+
+@Media (max-width: 1024px) {
+    .line-container-satu {
+        margin-top: 80px;
+    }
+}
+
+@Media (max-width: 768px) {
+    #countdown .content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    #countdown .title {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 35px;
+    }
+
+    #countdown .content .container {
+        width: 300px;
+        height: 260px;
+    }
+
+    .line-container {
+        margin-top: 20px;
+    }
+
+    .line-container p{
+        display: none;
+    }
+
+    .line-container-satu {
+        margin-top: 55px;
+    }
+
+    .line-container-satu p {
+        display: none;
+    }
+
+    #countdown h1:first-child{
+        z-index: 6;
+    }
+    
+    #countdown h1:last-child{
+        z-index: 6;
+    }
+
+    #information {
+        height: 110vh;
+    }
+    
+    #information .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 35px;
+    }
+
+    #information .container {
+        flex-direction: column;
+        width: 70%;
+    }
+    
+    #information .container:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }   
+    
+    #information .NewYearIMG {
+        width: 50%;
+        border: 3px solid black;
+        border-radius: 10px;
+    }
+
+    #information .container p {
+        color: white;
+        font-size: 17px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #quotes {
+        height: 85vh;
+    }
+
+    .bubble1, .bubble2, .bubble3, .bubble4, .bubble5, .bubble6, .bubble7 {
+        display: none;
+    }
+
+    #quotes .container {
+        width: 75%;
+    }
+    
+    #quotes .container p {
+        font-size: 17px;
+    }
+}
+
+@Media (max-width: 576px) {
+
+    #countdown {
+        height: 80vh;
+    }
+
+    #countdown .content .container {
+        width: 230px;
+        height: 190px;
+    }
+
+    #countdown h1:first-child{
+        font-size: 4.5rem;
+    }
+    
+    #countdown h1:last-child{
+        font-size: 2rem ;
+    }
+
+    .stars {
+        display: none;
+    }
+
+    #information h1:first-child{
+        font-size: 4.5rem;
+    }
+    
+    #information h1:last-child{
+        font-size: 2rem ;
+    }
+
+    #information .container p {
+        font-style: 15px;
+    }
+
+    #quotes h1:first-child{
+        font-size: 4.5rem;
+    }
+    
+    #quotes h1:last-child{
+        font-size: 2rem ;
+    }
+
+    #quotes .container p {
+        font-size: 15px;
+    }
+    
+    #quotes {
+        height: 80vh;
+    }
+}
+
+@Media (max-width: 576px) {
+
+    #countdown {
+        height: 67vh;
+    }
+
+    #countdown .content .container {
+        width: 160px;
+        height: 120px;
+    }
+
+    #countdown .content .container p {
+        color: white;
+        font-size: 30px;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    #countdown .content .container span {
+        color: white;
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #countdown h1:first-child{
+        font-size: 4rem;
+    }
+    
+    #countdown h1:last-child{
+        font-size: 1.5rem ;
+        text-align: center;
+    }
+
+    .stars {
+        display: none;
+    }
+    
+    .moon {
+        display: none;
+    }
+
+    #information h1:first-child{
+        font-size: 4rem;
+    }
+    
+    #information h1:last-child{
+        font-size: 1.5rem ;
+        text-align: center;
+    }
+
+    #information .container p {
+        font-size: 15px;
+    }
+
+    #quotes h1:first-child{
+        font-size: 4rem;
+    }
+    
+    #quotes h1:last-child{
+        font-size: 1.5rem ;
+        text-align: center;
+    }
+
+    #quotes .container p {
+        font-size: 15px;
+    }
+    
+    #quotes {
+        height: 70vh;
+    }
+
+    #nav ul li a {
+        font-size: 15px;
+    }
+}
+
+@Media (max-width: 395px) {
+    #quotes .container p {
+        font-size: 13px;
+    }
 }

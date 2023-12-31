@@ -19,3 +19,19 @@ const timeInterval = setInterval(function(){
     menit.innerHTML = minutes;
     detik.innerHTML = seconds;
 })
+
+const a = document.querySelectorAll('#nav ul li a');
+
+a.forEach(function(content){
+    content.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const href = content.getAttribute('href').substring(1);
+        
+        const section = document.getElementById(href);
+
+        if (section) {
+            section.scrollIntoView({behavior : "smooth"})
+        }
+    })
+})
