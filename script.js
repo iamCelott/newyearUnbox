@@ -4,6 +4,11 @@ const timeInterval = setInterval(function(){
     const WaktuSekarang = new Date().getTime();
     const selisihWaktu = WaktuTarget - WaktuSekarang
 
+    if (selisihWaktu <= 0) {
+        clearInterval(timeInterval);
+        return;
+    }
+
     const days = Math.floor(selisihWaktu / (1000 * 60 * 60 * 24));
     const hours = Math.floor((selisihWaktu % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((selisihWaktu % (1000 * 60 * 60)) / (1000 * 60));
@@ -18,7 +23,8 @@ const timeInterval = setInterval(function(){
     jam.innerHTML = hours;
     menit.innerHTML = minutes;
     detik.innerHTML = seconds;
-})
+
+},1000)
 
 const a = document.querySelectorAll('#nav ul li a');
 
